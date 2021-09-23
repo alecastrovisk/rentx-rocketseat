@@ -1,0 +1,30 @@
+{
+    "editor.tabSize": 2,
+    "explorer.compactFolders": false,
+    "material-icon-theme.folders.associations": {
+      "infra": "app",
+      "entities": "class",
+      "domain": "class",
+      "schemas": "class",
+      "typeorm": "database",
+      "repositories": "mappings",
+      "http": "container",
+      "migrations": "tools",
+      "modules": "components",
+      "implementations": "core",
+      "dtos": "typescript",
+      "fakes": "mock",
+      "websockets": "pipe",
+      "protos": "pipe",
+      "grpc": "pipe",
+      "providers": "include",
+      "subscribers": "messages",
+      "useCases": "controller",
+      "kafka": "scripts",
+      "mappers": "meta",
+      "_shared": "shared",
+      "eslint-config": "tools",
+      "kube": "kubernetes"
+      
+    },
+}

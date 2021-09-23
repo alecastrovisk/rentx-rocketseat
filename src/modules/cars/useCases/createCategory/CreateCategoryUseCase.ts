@@ -1,7 +1,8 @@
 import { inject, injectable } from "tsyringe";
-import { AppError } from "../../../../errors/AppError";
 
-import { ICategoriesRepository } from "../../entities/repositories/ICategoriesRepository";
+import { AppError } from "../../../../shared/errors/AppError";
+
+import { ICategoriesRepository } from "../../repositories/ICategoriesRepository";
 
 interface IRequest {
     name: string;
@@ -16,7 +17,7 @@ class CreateCategoryUseCase {
     ) {}
         
    async execute({ description, name }: IRequest ): Promise<void> {
-       try {
+       
         const categoryAlreadyExists = await this.categoriesRepository
         .findByName(
             name
@@ -27,9 +28,6 @@ class CreateCategoryUseCase {
          }
  
          this.categoriesRepository.create({ name, description });
-       } catch (error) {
-           throw new AppError('erro ao criar');
-       }
    } 
 }
 
