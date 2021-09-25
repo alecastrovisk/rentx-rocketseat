@@ -9,7 +9,7 @@ class CreateCarController {
       name,
       description,
       daily_rate,
-      lincense_plate,
+      license_plate,
       fine_amount,
       brand,
       category_id
@@ -21,7 +21,7 @@ class CreateCarController {
       name,
       description,
       daily_rate,
-      lincense_plate,
+      license_plate,
       fine_amount,
       brand,
       category_id

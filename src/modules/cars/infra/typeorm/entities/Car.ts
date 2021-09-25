@@ -20,7 +20,7 @@ class Car {
   available: boolean
   
   @Column()
-  lincense_plate: string;
+  license_plate: string;
   
   @Column()
   fine_amount: number;

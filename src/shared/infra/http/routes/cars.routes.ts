@@ -1,11 +1,14 @@
 import { Router } from "express";
-import { CreateCategoryController } from "../../../../modules/cars/useCases/createCategory/CreateCategoryController";
+import { CreateCarController } from "../../../../modules/cars/useCases/createCar/CreateCarController";
+import { ensureAdmin } from "../middlewares/ensureAdmin";
+import { ensureAuthenticate } from "../middlewares/ensureAuthenticated";
+
 
 
 const carRoutes = Router();
 
-const createCarController = new CreateCategoryController();
+const createCarController = new CreateCarController();
 
-carRoutes.post("/", createCarController.handle);
+carRoutes.post("/", ensureAuthenticate, ensureAdmin, createCarController.handle);
 
 export { carRoutes };

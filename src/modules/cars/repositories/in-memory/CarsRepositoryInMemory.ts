@@ -9,7 +9,7 @@ class CarsRepositoryInMemory implements ICarsRepository {
     brand, 
     category_id, 
     fine_amount, 
-    lincense_plate, 
+    license_plate, 
     daily_rate, 
     description, 
     name
@@ -20,7 +20,7 @@ class CarsRepositoryInMemory implements ICarsRepository {
       brand, 
       category_id, 
       fine_amount, 
-      lincense_plate, 
+      license_plate, 
       daily_rate, 
       description, 
       name
@@ -30,9 +30,9 @@ class CarsRepositoryInMemory implements ICarsRepository {
     return car;
   }
 
-  async findCarByLicensePlate(lincense_plate: string):Promise<Car> {
+  async findCarByLicensePlate(license_plate: string):Promise<Car> {
     return this.cars.find(
-      (car) => car.lincense_plate === lincense_plate
+      (car) => car.license_plate === license_plate
     );
   } 
 
