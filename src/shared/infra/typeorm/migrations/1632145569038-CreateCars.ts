@@ -61,8 +61,9 @@ export class CreateCars1632145569038 implements MigrationInterface {
                         columnNames: ["category_id"],
                         onDelete: "SET NULL",
                         onUpdate: "SET NULL"
-                    }
-                ]
+                    },
+                ],
+                
             })
         );
     }
