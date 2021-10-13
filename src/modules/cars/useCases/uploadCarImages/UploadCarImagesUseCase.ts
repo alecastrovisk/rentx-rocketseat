@@ -21,7 +21,7 @@ class UploadCarImagesUseCase {
         image
       ));
 
-  }
+  } 
 }
 
 export { UploadCarImagesUseCase };
